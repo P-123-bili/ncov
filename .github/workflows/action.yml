@@ -5,7 +5,6 @@ on:
   schedule:
      - cron: '5 */2 * * *'
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,12 +28,4 @@ jobs:
     - name: 王
       run: |
         python ./upload.py -n 1 -u ${{ secrets.USER_TWO }} -p ${{ secrets.PASS_TWO }} -f ./data/upload.txt
-    - name: 汤
-      run: |
-        python ./upload.py -n 1 -u ${{ secrets.USER_THREE }} -p ${{ secrets.PASS_THREE }} -f ./data/upload.txt
-    - name: 李
-      run: |
-        python ./upload.py -n 1 -u ${{ secrets.USER_FOUR }} -p ${{ secrets.PASS_FOUR }} -f ./data/upload.txt
-    - name: 张
-      run: |
-        python ./upload.py -n 1 -u ${{ secrets.USER_FIVE }} -p ${{ secrets.PASS_FIVE }} -f ./data/upload.txt
+
